@@ -1,0 +1,89 @@
+/* Animate gradient background on full screen */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(-45deg, #00b4d8, #90e0ef, #caf0f8, #0077b6);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Login container styling */
+.login-container {
+  background: rgba(255 255 255 / 0.85); /* Slightly transparent white */
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: fadeInScale 0.5s ease forwards;
+  backdrop-filter: blur(8px);
+}
+
+
+
+.login-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #023e8a;
+  text-shadow: 1px 1px 2px #90e0ef;
+}
+
+.login-form input {
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid #0077b6;
+  width: 100%;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #023e8a;
+}
+
+.login-form button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background: #023e8a;
+}
+
+/* Animation keyframe */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

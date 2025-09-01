@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #f0f8ff;
+  color: #333;
+}
+
+.app main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
